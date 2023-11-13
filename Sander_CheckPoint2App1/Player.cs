@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sander_CheckPoint2App1
 {
-	public abstract class Player
+	public class Player
 	{
-		string? Name {  get; set; }
-		string? Number { get; set; }
+		public string? Name {  get;}
+		public string? Number { get; private set; }
 
         public Player(string? name = null, string? number = null)
         {
@@ -17,5 +17,10 @@ namespace Sander_CheckPoint2App1
             Number = number ?? "Unkown Number";
         }
 
-    }
+
+		public override string ToString()
+		{
+			return $"#{Number}, {Name}";
+		}
+	}
 }

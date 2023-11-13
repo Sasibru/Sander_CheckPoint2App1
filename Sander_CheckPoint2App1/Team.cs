@@ -8,12 +8,33 @@ namespace Sander_CheckPoint2App1
 {
 	public class Team
 	{
-		string? Name { get; set; }
-		List<string> Players { get; set;}
+		string? Name { get;}
+		private List<Player> _players { get; set;} = new();
 
         public Team(string? name = null)
         {
             Name = name ?? "Unkown Team Name";
         }
-    }
+
+		public void AddPlayer(Player player)
+		{
+			_players.Add(player);
+		}
+
+		public override string ToString()
+		{
+			return $"{Name}";
+		}
+
+		public void PrintTeam()
+		{
+            Console.WriteLine(Name);
+
+            Console.WriteLine("------------");
+            foreach (Player player in _players)
+			{
+				Console.WriteLine(player);
+			}
+        }
+	}
 }

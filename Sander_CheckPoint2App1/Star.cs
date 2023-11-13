@@ -8,11 +8,15 @@ namespace Sander_CheckPoint2App1
 {
 	public class Star : Player
 	{
-		string Description { get; set; }
+		string Description { get;}
         public Star(string? name = null, string? number = null, string? description = null) : base(name, number)
         {
             Description = description ?? "Unkown Star Player";
         }
 
-    }
+		public override string ToString()
+		{
+			return $"#{Number}, {Name}, star player! {Description}";
+		}
+	}
 }
