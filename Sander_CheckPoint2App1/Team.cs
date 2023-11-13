@@ -21,6 +21,11 @@ namespace Sander_CheckPoint2App1
 			Players.Add(player);
 		}
 
+		public List<Player> GetPlayersList() 
+		{ 
+			return new(Players); 
+		}
+
 		public override string ToString()
 		{
 			return $"{Name}";
