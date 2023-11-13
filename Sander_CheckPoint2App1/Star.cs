@@ -11,7 +11,7 @@ namespace Sander_CheckPoint2App1
 		string Description { get;}
         public Star(string? name = null, string? number = null, string? description = null) : base(name, number)
         {
-            Description = description ?? "Unkown Star Player";
+            Description = description ?? "Unknown Star Player";
         }
 
 		public override string ToString()

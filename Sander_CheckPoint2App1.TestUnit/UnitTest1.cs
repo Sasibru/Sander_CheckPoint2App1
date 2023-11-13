@@ -33,13 +33,13 @@ namespace Sander_CheckPoint2App1.TestUnit
 			Assert.That(expected, Is.EqualTo(actual));
 		}
 		[Test]
-		public void AddPlayer_AddNewStarPlayer_ReturnString()
+		public void AddPlayer_AddNewStarPlayer_ReturnStringWithDefaultDescription()
 		{
 			Team team = new("Test Team2");
-			Player player = new("Russell Westbrook", "0");
-			string actual = player.ToString();
+			Star starPlayer = new("Russell Westbrook", "0");
+			string actual = starPlayer.ToString();
 
-			string expected = $"#0, Russell Westbrook";
+			string expected = $"#0, Russell Westbrook, star player! Unknown Star Player";
 
 			Assert.That(expected, Is.EqualTo(actual));
 		}
