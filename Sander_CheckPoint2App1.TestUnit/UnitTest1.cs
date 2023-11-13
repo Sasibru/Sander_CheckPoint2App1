@@ -1,3 +1,6 @@
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Xml.Linq;
+
 namespace Sander_CheckPoint2App1.TestUnit
 {
 	public class Tests
@@ -19,12 +22,24 @@ namespace Sander_CheckPoint2App1.TestUnit
 		}
 
 		[Test]
-		public void To()
+		public void AddPlayer_AddNewPlayer_ReturnString()
 		{
-			Team team = new Team("OKC Thunder");
-			string actual = team.ToString();
+			Team team = new("Test Team");
+			Player player = new("SGA", "2");
+			string actual = player.ToString();
 
-			string expected = "OKC Thunder";
+			string expected = $"#2, SGA";
+
+			Assert.That(expected, Is.EqualTo(actual));
+		}
+		[Test]
+		public void AddPlayer_AddNewStarPlayer_ReturnString()
+		{
+			Team team = new("Test Team2");
+			Player player = new("Russell Westbrook", "0");
+			string actual = player.ToString();
+
+			string expected = $"#0, Russell Westbrook";
 
 			Assert.That(expected, Is.EqualTo(actual));
 		}
