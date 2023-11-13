@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Sander_CheckPoint2App1
 {
-	public class Player : Team
+	public abstract class Player
 	{
 		string? Name {  get; set; }
 		string? Number { get; set; }
 
-        public Player(string? name = null, string? number = null) : base(name)
+        public Player(string? name = null, string? number = null)
         {
-            Name = name;
-            Number = number;
+            Name = name ?? "Unkown Player Name";
+            Number = number ?? "Unkown Number";
         }
 
     }
