@@ -9,7 +9,7 @@ namespace Sander_CheckPoint2App1
 	public class Team
 	{
 		string? Name { get;}
-		private List<Player> _players { get; set;} = new();
+		private List<Player> Players { get; set;} = new();
 
         public Team(string? name = null)
         {
@@ -18,7 +18,7 @@ namespace Sander_CheckPoint2App1
 
 		public void AddPlayer(Player player)
 		{
-			_players.Add(player);
+			Players.Add(player);
 		}
 
 		public override string ToString()
@@ -31,7 +31,7 @@ namespace Sander_CheckPoint2App1
             Console.WriteLine(Name);
 
             Console.WriteLine("------------");
-            foreach (Player player in _players)
+            foreach (Player player in Players)
 			{
 				Console.WriteLine(player);
 			}

@@ -17,5 +17,16 @@ namespace Sander_CheckPoint2App1.TestUnit
 
 			Assert.That(expected, Is.EqualTo(actual));
 		}
+
+		[Test]
+		public void To()
+		{
+			Team team = new Team("OKC Thunder");
+			string actual = team.ToString();
+
+			string expected = "OKC Thunder";
+
+			Assert.That(expected, Is.EqualTo(actual));
+		}
 	}
 }
