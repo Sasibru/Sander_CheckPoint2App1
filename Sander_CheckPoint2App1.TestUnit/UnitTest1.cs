@@ -8,9 +8,14 @@ namespace Sander_CheckPoint2App1.TestUnit
 		}
 
 		[Test]
-		public void Test1()
+		public void ToString_CreateNewTeam_ReturnTeamName()
 		{
-			Assert.Pass();
+			Team team = new Team("OKC Thunder");
+			string actual = team.ToString();
+
+			string expected = "OKC Thunder";
+
+			Assert.That(expected, Is.EqualTo(actual));
 		}
 	}
 }
